@@ -2,7 +2,8 @@
 
  Configuration files in this git repo
  
- # Note: To store the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
+ # Note 
+ To store the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
  
  # Why?
 
@@ -19,23 +20,25 @@ aws s3api create-bucket \
 ```
 
 # Enable Versioning 
-
+```
 aws s3api put-bucket-versioning \
   --bucket seg-terraform-state-bucket \
   --versioning-configuration Status=Enabled
+```
 
 # Verify 
-
+```
 aws s3api get-bucket-versioning \
   --bucket seg-terraform-state-bucket
-
+```
 
 
 # Create DynamoDB table for state locking.
 
+```
 aws dynamodb create-table \
   --table-name terraform-state-lock \
   --billing-mode PAY_PER_REQUEST \
   --attribute-definitions AttributeName=LockID,AttributeType=S \
   --key-schema AttributeName=LockID,KeyType=HASH
- 
+ ```
