@@ -3,7 +3,7 @@
  Configuration files in this git repo
  
  # Note 
- To store the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
+ To store and lock the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
  
  # Why?
 
