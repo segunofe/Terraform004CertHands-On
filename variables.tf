@@ -1,3 +1,3 @@
-variable "instance_type" {}
-variable "instance_count" {}
-variable "instance_name" {}
+variable "parent_instance_type" {}
+variable "parent_instance_count" {}
+variable "parent_instance_name" {}

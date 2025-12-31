@@ -23,3 +23,5 @@ resource "aws_instance" "webserver" {
     Name = "${var.instance_name}-${count.index + 1}"
   }
 }
+
+

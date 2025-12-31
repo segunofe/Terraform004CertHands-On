@@ -1,7 +1,7 @@
 module "aws_infra" {
   source = "./modules/aws-infra"
 
-  instance_count = var.instance_count
-  instance_name  = var.instance_name
-  instance_type  = var.instance_type
+  instance_count = var.parent_instance_count   # Passing parent variable to child
+  instance_name  = var.parent_instance_name
+  instance_type  = var.parent_instance_type
 }
