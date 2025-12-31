@@ -1,23 +1,9 @@
- # Build Reusable Terraform Module to provision AWS infrastructure 
+ # Build Reusable Terraform Module to provision AWS infrastructures
 
  Configuration files in this git repo
  
  # File structure 
-
- terraform/
-├── backend.tf          # for remote backend storage and locking - to store state file remotely 
-├── provider.tf
-├── main.tf              # calls module
-├── variables.tf
-├── terraform.tfvars      # to take in the values for the variables  like instance type (t3.micro), etc        
-├── outputs.tf            # output instance ids and private ips using the module and name of the outputs in the child module
-│
-└── modules/
-    └── aws-infra/
-        ├── main.tf      ✅ data + resource together
-        ├── variables.tf
-        └── outputs.tf    
-
+<img width="1051" height="365" alt="image" src="https://github.com/user-attachments/assets/17d73323-b263-45b1-aff6-0e808bd3bdc6" />
 
  
  # Note 
@@ -60,3 +46,21 @@ aws dynamodb create-table \
   --attribute-definitions AttributeName=LockID,AttributeType=S \
   --key-schema AttributeName=LockID,KeyType=HASH
  ```
+
+
+
+# To create the file structure - tree 
+
+ terraform/
+├── backend.tf          # for remote backend storage and locking - to store state file remotely 
+├── provider.tf
+├── main.tf              # calls module
+├── variables.tf
+├── terraform.tfvars      # to take in the values for the variables  like instance type (t3.micro), etc        
+├── outputs.tf            # output instance ids and private ips using the module and name of the outputs in the child module
+│
+└── modules/
+    └── aws-infra/
+        ├── main.tf      ✅ data + resource together
+        ├── variables.tf
+        └── outputs.tf  
