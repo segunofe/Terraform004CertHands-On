@@ -64,3 +64,7 @@ aws dynamodb create-table \
         ├── main.tf      ✅ data + resource together
         ├── variables.tf
         └── outputs.tf  
+Helpful terraform commands to keep your code clean and readable in the current directory and all subdirectories 
+```
+terraform fmt -recursive
+``` 
