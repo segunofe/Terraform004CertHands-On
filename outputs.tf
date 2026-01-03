@@ -1,10 +1,10 @@
 output "instance_ids" {
-  value = module.aws_infra.instance_ids
+  value = module.aws_infra.instance_ids_generated
 }
 
 output "instance_ips" {
   description = "Outputs the private IPs of the EC2 instances"
-  value       = module.aws_infra.instance_ips
+  value       = module.aws_infra.instance_ips_generated
 }
 
 
