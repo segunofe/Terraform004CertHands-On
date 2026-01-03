@@ -110,6 +110,6 @@ git push -u origin master
 ```
 git add .
 git commit -m "your message"
-git push
+git push -u origin master
 ```
  
