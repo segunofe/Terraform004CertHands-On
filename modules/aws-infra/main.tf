@@ -14,7 +14,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "webserver" {
+resource "aws_instance" "server_name" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   count         = var.instance_count
@@ -23,5 +23,7 @@ resource "aws_instance" "webserver" {
     Name = "${var.instance_name}-${count.index + 1}"
   }
 }
+
+
 
 
