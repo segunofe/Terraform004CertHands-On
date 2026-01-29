@@ -10,7 +10,6 @@ data "aws_ami" "ubuntu" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
-
   owners = ["099720109477"] # Canonical
 }
 
@@ -24,6 +23,9 @@ resource "aws_instance" "server_name" {
   }
 }
 
+resource "aws_s3_bucket" "example" {
+  bucket = var.bucket_name
 
+}
 
 

@@ -12,3 +12,8 @@ variable "instance_name" {
   type        = string
   description = "The name tag for the instance"
 }
+
+variable "bucket_name" {
+  type        = string
+  description = "The name of the S3 bucket that would be created"
+}
