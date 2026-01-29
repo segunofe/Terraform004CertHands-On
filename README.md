@@ -47,24 +47,6 @@ aws dynamodb create-table \
   --key-schema AttributeName=LockID,KeyType=HASH
  ```
 
-
-
-# To create the file structure - tree 
-
- terraform/
-├── backend.tf          # for remote backend storage and locking - to store state file remotely 
-├── provider.tf
-├── main.tf              # calls module
-├── variables.tf
-├── terraform.tfvars      # to take in the values for the variables  like instance type (t3.micro), etc        
-├── outputs.tf            # output instance ids and private ips using the module and name of the outputs in the child module
-│
-└── modules/
-    └── aws-infra/
-        ├── main.tf      ✅ data + resource together
-        ├── variables.tf
-        └── outputs.tf  
-
         
 # Helpful terraform commands to keep your code clean and readable in the current directory and all subdirectories 
 ```
